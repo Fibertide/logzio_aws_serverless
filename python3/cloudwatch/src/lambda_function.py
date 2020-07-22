@@ -122,8 +122,8 @@ def _get_additional_logs_data(aws_logs_data, context):
 def _is_valid_log(log):
     # type (dict) -> bool
     message = log['message']
-    is_info_log = message.startswith('START') or message.startswith('END') or message.startswith('REPORT')
-    return not is_info_log
+    #is_info_log = message.startswith('START') or message.startswith('END') or message.startswith('REPORT')
+    return True
 
 
 def lambda_handler(event, context):
